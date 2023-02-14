@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For each</title>
+</head>
+<body>
+
+    <div id="divID"></div>
+
+    <script>
+
+        const animalsArray = [
+            {tipe: 'Cow', name: 'Lola', age: 12, mode: 'happy'},
+            {tipe: 'Dog', name: 'Popetas', age: 8, mode: 'crazy'},
+            {tipe: 'Cat', name: 'Lucifer', age: 6, mode: 'evil' },
+            {tipe: 'Squirrel', name: 'Squiquery', age: 2, mode: '... actually we dont know what is doing'}
+        ]
+
+        const showAnimal = document.getElementById('divID');
+        animalsArray.forEach(anAnimal => {
+            showAnimal.innerHTML += `<li> ${anAnimal.tipe}, its name is ${anAnimal.name} and with ${anAnimal.age} years old is very ${anAnimal.mode} in the farm.`
+        })
+
+    </script>
+
+</body>
+</html>
